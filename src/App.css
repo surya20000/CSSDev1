@@ -1,0 +1,134 @@
+body {
+  width: 100%;
+}
+
+.navbar {
+  background-color: rgb(34, 32, 123);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5vh;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.navbar-link {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%; 
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+  }
+
+  .navbar-link {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 100;
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 50;
+  cursor: pointer;
+  overflow-y: scroll;
+}
+
+.wid {
+  width: 400px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
+.brows {
+  font-size: 2.5vh;
+  display: inline;
+  align-items: center;
+  padding: 1vh;
+  color: white;
+  background-color: #333;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+.brows:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
